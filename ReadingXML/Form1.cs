@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Read XML data into a dataset: https://msdn.microsoft.com/en-us/library/ekw4dh3f.aspx
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,23 +19,16 @@ namespace ReadingXML
             InitializeComponent();
         }
 
+        // Read XML file on button click
         private void ReadXmlButton_Click(object sender, EventArgs e)
         {
-            string filePath = @"C:\Users\jrmer\Amazon Drive\Dev Lab\ReadingXML\ReadingXML\authors.xml";
+            // Path to XML file
+            string filePath = @"C:\Users\jrmer\Amazon Drive\Dev Lab\ReadingXML\ReadingXMLTestContent\Mech x Elec.xml";
 
             AuthorsDataSet.ReadXml(filePath);
 
             dataGridView1.DataSource = AuthorsDataSet;
-            dataGridView1.DataMember = "authors";
+            dataGridView1.DataMember = "clashresult";
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            System.IO.StringWriter swXML = new System.IO.StringWriter();
-            AuthorsDataSet.WriteXmlSchema(swXML);
-            textBox1.Text = swXML.ToString();
-        }
-
-
     }
 }
