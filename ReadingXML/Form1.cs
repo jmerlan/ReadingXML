@@ -8,6 +8,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Xml.Linq;
+using System.Xml;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -40,33 +42,20 @@ namespace ReadingXML
                 fileNameWithPath = openFileDialog1.FileName;
                 fileDirectory = Path.GetDirectoryName(openFileDialog1.FileName);
                 fileName = Path.GetFileName(openFileDialog1.FileName);
-                xmlFileBrowser.Text = fileName;
 
                 // Displays the current fileNameWithPath in textbox
                 filePathTextBox.Text = fileNameWithPath;
 
-                // Create new DataSet object and print to dataGridView
-                DataSet xmlData = new DataSet();
-                xmlData.ReadXml(fileNameWithPath);
-                dataGridView1.DataSource = xmlData;
+                // Create new DataSet object
+                DataSet dataSet = new DataSet();
+                dataSet.ReadXml(fileNameWithPath);
+
+                // Print dataset to data grid
+                dataGridView1.DataSource = dataSet;
                 dataGridView1.DataMember = "clashresult";
 
             }
         }
-
-        // Read XML file on button click
-        private void ReadXmlButton_Click(object sender, EventArgs e)
-        {
-            //// Reads XML file at filePath
-            //XMLDataSet.ReadXml(fileNameWithPath);
-
-            //// Display XML file
-            //dataGridView1.DataSource = XMLDataSet;
-            //dataGridView1.DataMember = "clashresult";
-
-            //// Display current file in textbox
-            //filePathTextBox.Text = fileNameWithPath;
-        }
-
     }
 }
+

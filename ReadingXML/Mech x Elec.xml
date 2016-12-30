@@ -1,0 +1,1674 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<exchange xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" units="m" filename="" filepath="">
+  <batchtest name="Report" internal_name="Report" units="m">
+    <clashtests>
+      <clashtest name="Mech x Elec" test_type="hard" status="ok" tolerance="0.001" merge_composites="1">
+        <linkage mode="none"/>
+        <rules/>
+        <summary total="64" new="0" active="8" reviewed="16" approved="0" resolved="40">
+          <testtype>Hard</testtype>
+          <teststatus>OK</teststatus>
+        </summary>
+        <clashresults>
+          <clashresult name="Clash57" guid="a6f491ce-6ac0-4299-8238-7a20c361c35f" href="Mech x Elec_files\cd000001.jpg" status="active" distance="-0.031">
+            <description>Hard</description>
+            <resultstatus>Active</resultstatus>
+            <clashpoint>
+              <pos3f x="7.825" y="-26.779" z="3.083"/>
+            </clashpoint>
+            <gridlocation>C-7 : Level 1</gridlocation>
+            <createddate>
+              <date year="2016" month="12" day="28" hour="20" minute="44" second="43"/>
+            </createddate>
+            <clashobjects>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>90999</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Mechanical.nwc</node>
+                  <node>Ducts</node>
+                  <node>Round Duct</node>
+                  <node>Default</node>
+                  <node>Round Duct</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Round Duct</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>4308085</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Electrical.nwc</node>
+                  <node>50111 - YH - Carlsbad CA - Rvt 2015 - Central.rvt : 1 : location &lt;Not Shared&gt;</node>
+                  <node>Lighting Fixtures</node>
+                  <node>Lt - B - Recessed Can</node>
+                  <node>3.5&quot; Recessed LED SPOT Optics</node>
+                  <node>Lt - B - Recessed Can</node>
+                  <node>3.5&quot; Recessed LED SPOT Optics</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>3.5&quot; Recessed LED SPOT Optics</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+            </clashobjects>
+          </clashresult>
+          <clashresult name="Clash58" guid="9edde7f6-fb16-4d57-a052-6865a69da03d" href="Mech x Elec_files\cd000002.jpg" status="active" distance="-0.018">
+            <description>Hard</description>
+            <resultstatus>Active</resultstatus>
+            <clashpoint>
+              <pos3f x="10.649" y="-27.491" z="4.848"/>
+            </clashpoint>
+            <gridlocation>B-7 : T.O. SLAB - MEZZ.</gridlocation>
+            <createddate>
+              <date year="2016" month="12" day="28" hour="20" minute="44" second="43"/>
+            </createddate>
+            <clashobjects>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>51077</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Mechanical.nwc</node>
+                  <node>Air Terminals</node>
+                  <node>Titus-Round_Neck_Supply_Diffuser-TMRA</node>
+                  <node>TMRA-16</node>
+                  <node>Titus-Round_Neck_Supply_Diffuser-TMRA</node>
+                  <node>TMRA-16</node>
+                  <node>Steel - Titus - 26 White</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Steel - Titus - 26 White</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>4335495</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Electrical.nwc</node>
+                  <node>50111 - YH - Carlsbad CA - Rvt 2015 - Central.rvt : 1 : location &lt;Not Shared&gt;</node>
+                  <node>Lighting Fixtures</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Lt - FB -  Track</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+            </clashobjects>
+          </clashresult>
+          <clashresult name="Clash59" guid="73bb82ea-c041-4408-a006-8f2bce9ab9a2" href="Mech x Elec_files\cd000003.jpg" status="active" distance="-0.017">
+            <description>Hard</description>
+            <resultstatus>Active</resultstatus>
+            <clashpoint>
+              <pos3f x="10.649" y="-41.146" z="4.852"/>
+            </clashpoint>
+            <gridlocation>A1-7 : T.O. SLAB - MEZZ.</gridlocation>
+            <createddate>
+              <date year="2016" month="12" day="28" hour="20" minute="44" second="43"/>
+            </createddate>
+            <clashobjects>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>64586</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Mechanical.nwc</node>
+                  <node>Air Terminals</node>
+                  <node>Titus-Round_Neck_Supply_Diffuser-TMRA</node>
+                  <node>TMRA-16</node>
+                  <node>Titus-Round_Neck_Supply_Diffuser-TMRA</node>
+                  <node>TMRA-16</node>
+                  <node>Steel - Titus - 26 White</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Steel - Titus - 26 White</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>4354204</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Electrical.nwc</node>
+                  <node>50111 - YH - Carlsbad CA - Rvt 2015 - Central.rvt : 1 : location &lt;Not Shared&gt;</node>
+                  <node>Lighting Fixtures</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Lt - FB -  Track</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+            </clashobjects>
+          </clashresult>
+          <clashresult name="Clash60" guid="be79cd56-c87b-4323-9b8b-751f5a599269" href="Mech x Elec_files\cd000004.jpg" status="active" distance="-0.015">
+            <description>Hard</description>
+            <resultstatus>Active</resultstatus>
+            <clashpoint>
+              <pos3f x="10.649" y="-37.523" z="4.846"/>
+            </clashpoint>
+            <gridlocation>A-7 : T.O. SLAB - MEZZ.</gridlocation>
+            <createddate>
+              <date year="2016" month="12" day="28" hour="20" minute="44" second="43"/>
+            </createddate>
+            <clashobjects>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>62793</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Mechanical.nwc</node>
+                  <node>Air Terminals</node>
+                  <node>Titus-Round_Neck_Supply_Diffuser-TMRA</node>
+                  <node>TMRA-16</node>
+                  <node>Titus-Round_Neck_Supply_Diffuser-TMRA</node>
+                  <node>TMRA-16</node>
+                  <node>Steel - Titus - 26 White</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Steel - Titus - 26 White</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>4354204</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Electrical.nwc</node>
+                  <node>50111 - YH - Carlsbad CA - Rvt 2015 - Central.rvt : 1 : location &lt;Not Shared&gt;</node>
+                  <node>Lighting Fixtures</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Lt - FB -  Track</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+            </clashobjects>
+          </clashresult>
+          <clashresult name="Clash61" guid="0b33a618-8ac3-499e-ac99-308bbfa6774b" href="Mech x Elec_files\cd000005.jpg" status="active" distance="-0.013">
+            <description>Hard</description>
+            <resultstatus>Active</resultstatus>
+            <clashpoint>
+              <pos3f x="7.854" y="-29.781" z="3.219"/>
+            </clashpoint>
+            <gridlocation>B-7 : Level 1</gridlocation>
+            <createddate>
+              <date year="2016" month="12" day="28" hour="20" minute="44" second="43"/>
+            </createddate>
+            <clashobjects>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>90933</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Mechanical.nwc</node>
+                  <node>Ducts</node>
+                  <node>Round Duct</node>
+                  <node>Default</node>
+                  <node>Round Duct</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Round Duct</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>4314034</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Electrical.nwc</node>
+                  <node>50111 - YH - Carlsbad CA - Rvt 2015 - Central.rvt : 1 : location &lt;Not Shared&gt;</node>
+                  <node>Electrical Fixtures</node>
+                  <node>AV - Speaker - Clng Mount</node>
+                  <node>CM500i</node>
+                  <node>AV - Speaker - Clng Mount</node>
+                  <node>CM500i</node>
+                  <node>Default (E Wall)</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Default (E Wall)</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+            </clashobjects>
+          </clashresult>
+          <clashresult name="Clash62" guid="a087b1f7-f94b-4148-b00b-361816badd2e" href="Mech x Elec_files\cd000006.jpg" status="active" distance="-0.011">
+            <description>Hard</description>
+            <resultstatus>Active</resultstatus>
+            <clashpoint>
+              <pos3f x="27.292" y="-40.943" z="4.907"/>
+            </clashpoint>
+            <gridlocation>A1-5 : T.O. SLAB - MEZZ.</gridlocation>
+            <createddate>
+              <date year="2016" month="12" day="28" hour="20" minute="44" second="43"/>
+            </createddate>
+            <clashobjects>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>64519</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Mechanical.nwc</node>
+                  <node>Air Terminals</node>
+                  <node>Titus-Round_Neck_Supply_Diffuser-TMRA</node>
+                  <node>TMRA-16</node>
+                  <node>Titus-Round_Neck_Supply_Diffuser-TMRA</node>
+                  <node>TMRA-16</node>
+                  <node>Steel - Titus - 26 White</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Steel - Titus - 26 White</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>4328820</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Electrical.nwc</node>
+                  <node>50111 - YH - Carlsbad CA - Rvt 2015 - Central.rvt : 1 : location &lt;Not Shared&gt;</node>
+                  <node>Lighting Fixtures</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Lt - FB -  Track</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+            </clashobjects>
+          </clashresult>
+          <clashresult name="Clash63" guid="32fe0739-1820-4df4-9368-a85fe58f1c33" href="Mech x Elec_files\cd000007.jpg" status="active" distance="-0.009">
+            <description>Hard</description>
+            <resultstatus>Active</resultstatus>
+            <clashpoint>
+              <pos3f x="27.292" y="-31.246" z="4.910"/>
+            </clashpoint>
+            <gridlocation>B-5 : T.O. SLAB - MEZZ.</gridlocation>
+            <createddate>
+              <date year="2016" month="12" day="28" hour="20" minute="44" second="43"/>
+            </createddate>
+            <clashobjects>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>51519</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Mechanical.nwc</node>
+                  <node>Air Terminals</node>
+                  <node>Titus-Round_Neck_Supply_Diffuser-TMRA</node>
+                  <node>TMRA-16</node>
+                  <node>Titus-Round_Neck_Supply_Diffuser-TMRA</node>
+                  <node>TMRA-16</node>
+                  <node>Steel - Titus - 26 White</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Steel - Titus - 26 White</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>4315737</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Electrical.nwc</node>
+                  <node>50111 - YH - Carlsbad CA - Rvt 2015 - Central.rvt : 1 : location &lt;Not Shared&gt;</node>
+                  <node>Lighting Fixtures</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Lt - FB -  Track</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+            </clashobjects>
+          </clashresult>
+          <clashresult name="Clash64" guid="95950609-34ac-47da-9f9c-82c06e613b45" href="Mech x Elec_files\cd000008.jpg" status="active" distance="-0.007">
+            <description>Hard</description>
+            <resultstatus>Active</resultstatus>
+            <clashpoint>
+              <pos3f x="10.813" y="-27.587" z="4.826"/>
+            </clashpoint>
+            <gridlocation>B-7 : T.O. SLAB - MEZZ.</gridlocation>
+            <createddate>
+              <date year="2016" month="12" day="28" hour="20" minute="44" second="43"/>
+            </createddate>
+            <clashobjects>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>51077</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Mechanical.nwc</node>
+                  <node>Air Terminals</node>
+                  <node>Titus-Round_Neck_Supply_Diffuser-TMRA</node>
+                  <node>TMRA-16</node>
+                  <node>Titus-Round_Neck_Supply_Diffuser-TMRA</node>
+                  <node>TMRA-16</node>
+                  <node>Steel - Titus - 26 White</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Steel - Titus - 26 White</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>4317169</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Electrical.nwc</node>
+                  <node>50111 - YH - Carlsbad CA - Rvt 2015 - Central.rvt : 1 : location &lt;Not Shared&gt;</node>
+                  <node>Lighting Fixtures</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Lt - FB -  Track</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+            </clashobjects>
+          </clashresult>
+          <clashresult name="Clash21" guid="67e21497-e76d-4dd3-a151-b0c37b36be46" href="Mech x Elec_files\cd000009.jpg" status="reviewed" distance="-0.030">
+            <description>Hard</description>
+            <resultstatus>Reviewed</resultstatus>
+            <clashpoint>
+              <pos3f x="28.554" y="-28.366" z="4.547"/>
+            </clashpoint>
+            <gridlocation>B-5 : T.O. SLAB - MEZZ.</gridlocation>
+            <createddate>
+              <date year="2016" month="12" day="28" hour="13" minute="16" second="17"/>
+            </createddate>
+            <clashobjects>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>46533</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Mechanical.nwc</node>
+                  <node>Duct Fittings</node>
+                  <node>Rectangular Elbow - Mitered - Single Thickness Vanes</node>
+                  <node>Standard</node>
+                  <node>Rectangular Elbow - Mitered - Single Thickness Vanes</node>
+                  <node>Standard</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Standard</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>4337405</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Electrical.nwc</node>
+                  <node>50111 - YH - Carlsbad CA - Rvt 2015 - Central.rvt : 1 : location &lt;Not Shared&gt;</node>
+                  <node>Lighting Fixtures</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Lt - FB -  Track</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+            </clashobjects>
+          </clashresult>
+          <clashresult name="Clash30" guid="75c59a24-d91f-49d9-bd41-a97a95d4f5b9" href="Mech x Elec_files\cd000010.jpg" status="reviewed" distance="-0.030">
+            <description>Hard</description>
+            <resultstatus>Reviewed</resultstatus>
+            <clashpoint>
+              <pos3f x="25.349" y="-43.061" z="5.944"/>
+            </clashpoint>
+            <gridlocation>A1-6 : T.O. SLAB - MEZZ.</gridlocation>
+            <createddate>
+              <date year="2016" month="12" day="28" hour="13" minute="16" second="17"/>
+            </createddate>
+            <assignedto>Elem</assignedto>
+            <clashobjects>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>78370</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Mechanical.nwc</node>
+                  <node>Duct Fittings</node>
+                  <node>Rectangular Elbow - Mitered - Single Thickness Vanes</node>
+                  <node>Standard</node>
+                  <node>Rectangular Elbow - Mitered - Single Thickness Vanes</node>
+                  <node>Standard</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Standard</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>4317749</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Electrical.nwc</node>
+                  <node>50111 - YH - Carlsbad CA - Rvt 2015 - Central.rvt : 1 : location &lt;Not Shared&gt;</node>
+                  <node>Lighting Fixtures</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Lt - FB -  Track</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+            </clashobjects>
+            <comments>
+              <comment id="0" status="new">
+                <user>jrmer</user>
+                <body>Assigned to lem
+___________________________________</body>
+                <createddate>
+                  <date year="2016" month="12" day="28" hour="14" minute="27" second="27"/>
+                </createddate>
+              </comment>
+              <comment id="0" status="new">
+                <user>jrmer</user>
+                <body>Assigned to Elem
+___________________________________</body>
+                <createddate>
+                  <date year="2016" month="12" day="28" hour="14" minute="27" second="34"/>
+                </createddate>
+              </comment>
+            </comments>
+          </clashresult>
+          <clashresult name="Clash23" guid="cdc893b9-74d0-4350-9e61-bbee5b3b1e0d" href="Mech x Elec_files\cd000011.jpg" status="reviewed" distance="-0.029">
+            <description>Hard</description>
+            <resultstatus>Reviewed</resultstatus>
+            <clashpoint>
+              <pos3f x="7.800" y="-26.763" z="3.051"/>
+            </clashpoint>
+            <gridlocation>C-7 : Level 1</gridlocation>
+            <createddate>
+              <date year="2016" month="12" day="28" hour="13" minute="16" second="17"/>
+            </createddate>
+            <assignedto>Elem</assignedto>
+            <clashobjects>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>60739</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Mechanical.nwc</node>
+                  <node>Air Terminals</node>
+                  <node>Titus-Round_Neck_Supply_Diffuser-OMNI_Surface_Mount</node>
+                  <node>OMNI-08_12x12</node>
+                  <node>Titus-Round_Neck_Supply_Diffuser-OMNI_Surface_Mount</node>
+                  <node>OMNI-08_12x12</node>
+                  <node>Steel - Titus - 26 White</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Steel - Titus - 26 White</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>4308085</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Electrical.nwc</node>
+                  <node>50111 - YH - Carlsbad CA - Rvt 2015 - Central.rvt : 1 : location &lt;Not Shared&gt;</node>
+                  <node>Lighting Fixtures</node>
+                  <node>Lt - B - Recessed Can</node>
+                  <node>3.5&quot; Recessed LED SPOT Optics</node>
+                  <node>Lt - B - Recessed Can</node>
+                  <node>3.5&quot; Recessed LED SPOT Optics</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>3.5&quot; Recessed LED SPOT Optics</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+            </clashobjects>
+            <comments>
+              <comment id="0" status="new">
+                <user>jrmer</user>
+                <body>Assigned to Elem
+___________________________________</body>
+                <createddate>
+                  <date year="2016" month="12" day="28" hour="14" minute="28" second="29"/>
+                </createddate>
+              </comment>
+            </comments>
+          </clashresult>
+          <clashresult name="Clash33" guid="614ad76a-3e98-49a4-810c-d2d65b86a4c6" href="Mech x Elec_files\cd000012.jpg" status="reviewed" distance="-0.028">
+            <description>Hard</description>
+            <resultstatus>Reviewed</resultstatus>
+            <clashpoint>
+              <pos3f x="27.292" y="-40.937" z="4.978"/>
+            </clashpoint>
+            <gridlocation>A1-5 : T.O. SLAB - MEZZ.</gridlocation>
+            <createddate>
+              <date year="2016" month="12" day="28" hour="13" minute="16" second="17"/>
+            </createddate>
+            <clashobjects>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>65113</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Mechanical.nwc</node>
+                  <node>Ducts</node>
+                  <node>Round Duct</node>
+                  <node>Default</node>
+                  <node>Round Duct</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Round Duct</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>4328820</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Electrical.nwc</node>
+                  <node>50111 - YH - Carlsbad CA - Rvt 2015 - Central.rvt : 1 : location &lt;Not Shared&gt;</node>
+                  <node>Lighting Fixtures</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Lt - FB -  Track</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+            </clashobjects>
+          </clashresult>
+          <clashresult name="Clash32" guid="59508371-7ff9-49be-a65f-2708eed95461" href="Mech x Elec_files\cd000013.jpg" status="reviewed" distance="-0.028">
+            <description>Hard</description>
+            <resultstatus>Reviewed</resultstatus>
+            <clashpoint>
+              <pos3f x="25.347" y="-43.061" z="6.629"/>
+            </clashpoint>
+            <gridlocation>A1-6 : T.O. SLAB - MEZZ.</gridlocation>
+            <createddate>
+              <date year="2016" month="12" day="28" hour="13" minute="16" second="17"/>
+            </createddate>
+            <clashobjects>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>78122</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Mechanical.nwc</node>
+                  <node>Ducts</node>
+                  <node>Rectangular Duct</node>
+                  <node>Default</node>
+                  <node>Rectangular Duct</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Rectangular Duct</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>4317749</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Electrical.nwc</node>
+                  <node>50111 - YH - Carlsbad CA - Rvt 2015 - Central.rvt : 1 : location &lt;Not Shared&gt;</node>
+                  <node>Lighting Fixtures</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Lt - FB -  Track</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+            </clashobjects>
+          </clashresult>
+          <clashresult name="Clash25" guid="605dbcd1-fa84-43a9-b6c4-0a36f0052217" href="Mech x Elec_files\cd000014.jpg" status="reviewed" distance="-0.027">
+            <description>Hard</description>
+            <resultstatus>Reviewed</resultstatus>
+            <clashpoint>
+              <pos3f x="7.848" y="-29.794" z="3.051"/>
+            </clashpoint>
+            <gridlocation>B-7 : Level 1</gridlocation>
+            <createddate>
+              <date year="2016" month="12" day="28" hour="13" minute="16" second="17"/>
+            </createddate>
+            <clashobjects>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>60751</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Mechanical.nwc</node>
+                  <node>Air Terminals</node>
+                  <node>Titus-Round_Neck_Supply_Diffuser-OMNI_Surface_Mount</node>
+                  <node>OMNI-08_12x12</node>
+                  <node>Titus-Round_Neck_Supply_Diffuser-OMNI_Surface_Mount</node>
+                  <node>OMNI-08_12x12</node>
+                  <node>Steel - Titus - 26 White</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Steel - Titus - 26 White</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>4314034</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Electrical.nwc</node>
+                  <node>50111 - YH - Carlsbad CA - Rvt 2015 - Central.rvt : 1 : location &lt;Not Shared&gt;</node>
+                  <node>Electrical Fixtures</node>
+                  <node>AV - Speaker - Clng Mount</node>
+                  <node>CM500i</node>
+                  <node>AV - Speaker - Clng Mount</node>
+                  <node>CM500i</node>
+                  <node>Default (E Wall)</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Default (E Wall)</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+            </clashobjects>
+          </clashresult>
+          <clashresult name="Clash37" guid="ec431fac-1425-49fe-b216-c092550e3566" href="Mech x Elec_files\cd000015.jpg" status="reviewed" distance="-0.026">
+            <description>Hard</description>
+            <resultstatus>Reviewed</resultstatus>
+            <clashpoint>
+              <pos3f x="27.292" y="-40.940" z="5.867"/>
+            </clashpoint>
+            <gridlocation>A1-5 : T.O. SLAB - MEZZ.</gridlocation>
+            <createddate>
+              <date year="2016" month="12" day="28" hour="13" minute="16" second="17"/>
+            </createddate>
+            <clashobjects>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>65121</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Mechanical.nwc</node>
+                  <node>Duct Fittings</node>
+                  <node>Round Elbow</node>
+                  <node>1 D</node>
+                  <node>Round Elbow</node>
+                  <node>1 D</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>1 D</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>4328820</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Electrical.nwc</node>
+                  <node>50111 - YH - Carlsbad CA - Rvt 2015 - Central.rvt : 1 : location &lt;Not Shared&gt;</node>
+                  <node>Lighting Fixtures</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Lt - FB -  Track</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+            </clashobjects>
+          </clashresult>
+          <clashresult name="Clash35" guid="45b0b502-c3c5-4540-a9dd-f4e11871e817" href="Mech x Elec_files\cd000016.jpg" status="reviewed" distance="-0.020">
+            <description>Hard</description>
+            <resultstatus>Reviewed</resultstatus>
+            <clashpoint>
+              <pos3f x="25.817" y="-30.507" z="6.468"/>
+            </clashpoint>
+            <gridlocation>B-6 : T.O. SLAB - MEZZ.</gridlocation>
+            <createddate>
+              <date year="2016" month="12" day="28" hour="13" minute="16" second="17"/>
+            </createddate>
+            <clashobjects>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>44833</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Mechanical.nwc</node>
+                  <node>Ducts</node>
+                  <node>Round Duct</node>
+                  <node>Default</node>
+                  <node>Round Duct</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Round Duct</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>4317253</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Electrical.nwc</node>
+                  <node>50111 - YH - Carlsbad CA - Rvt 2015 - Central.rvt : 1 : location &lt;Not Shared&gt;</node>
+                  <node>Lighting Fixtures</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Lt - FB -  Track</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+            </clashobjects>
+          </clashresult>
+          <clashresult name="Clash29" guid="362f15e4-d793-4b46-bf7b-a092683c8abc" href="Mech x Elec_files\cd000017.jpg" status="reviewed" distance="-0.020">
+            <description>Hard</description>
+            <resultstatus>Reviewed</resultstatus>
+            <clashpoint>
+              <pos3f x="10.649" y="-37.525" z="6.428"/>
+            </clashpoint>
+            <gridlocation>A-7 : T.O. SLAB - MEZZ.</gridlocation>
+            <createddate>
+              <date year="2016" month="12" day="28" hour="13" minute="16" second="17"/>
+            </createddate>
+            <clashobjects>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>62976</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Mechanical.nwc</node>
+                  <node>Duct Fittings</node>
+                  <node>Round Elbow</node>
+                  <node>1 D</node>
+                  <node>Round Elbow</node>
+                  <node>1 D</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>1 D</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>4354204</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Electrical.nwc</node>
+                  <node>50111 - YH - Carlsbad CA - Rvt 2015 - Central.rvt : 1 : location &lt;Not Shared&gt;</node>
+                  <node>Lighting Fixtures</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Lt - FB -  Track</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+            </clashobjects>
+          </clashresult>
+          <clashresult name="Clash48" guid="af02a71e-8a41-46b1-bc70-3390ca286c6a" href="Mech x Elec_files\cd000018.jpg" status="reviewed" distance="-0.017">
+            <description>Hard</description>
+            <resultstatus>Reviewed</resultstatus>
+            <clashpoint>
+              <pos3f x="10.815" y="-29.955" z="6.075"/>
+            </clashpoint>
+            <gridlocation>B-7 : T.O. SLAB - MEZZ.</gridlocation>
+            <createddate>
+              <date year="2016" month="12" day="28" hour="13" minute="16" second="17"/>
+            </createddate>
+            <clashobjects>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>56796</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Mechanical.nwc</node>
+                  <node>Duct Fittings</node>
+                  <node>Round Elbow</node>
+                  <node>1 D</node>
+                  <node>Round Elbow</node>
+                  <node>1 D</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>1 D</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>4317215</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Electrical.nwc</node>
+                  <node>50111 - YH - Carlsbad CA - Rvt 2015 - Central.rvt : 1 : location &lt;Not Shared&gt;</node>
+                  <node>Lighting Fixtures</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Lt - FB -  Track</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+            </clashobjects>
+          </clashresult>
+          <clashresult name="Clash31" guid="05d0f2c7-f056-4c44-9939-9aee8793cb9e" href="Mech x Elec_files\cd000019.jpg" status="reviewed" distance="-0.017">
+            <description>Hard</description>
+            <resultstatus>Reviewed</resultstatus>
+            <clashpoint>
+              <pos3f x="12.731" y="-32.961" z="6.550"/>
+            </clashpoint>
+            <gridlocation>B-7 : T.O. SLAB - MEZZ.</gridlocation>
+            <createddate>
+              <date year="2016" month="12" day="28" hour="13" minute="16" second="17"/>
+            </createddate>
+            <clashobjects>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>56325</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Mechanical.nwc</node>
+                  <node>Duct Fittings</node>
+                  <node>Round Wye - Lateral - Tapered Body</node>
+                  <node>Standard</node>
+                  <node>Round Wye - Lateral - Tapered Body</node>
+                  <node>Standard</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Standard</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>4325783</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Electrical.nwc</node>
+                  <node>50111 - YH - Carlsbad CA - Rvt 2015 - Central.rvt : 1 : location &lt;Not Shared&gt;</node>
+                  <node>Lighting Fixtures</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Lt - FB -  Track</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+            </clashobjects>
+          </clashresult>
+          <clashresult name="Clash39" guid="22f740d5-8e79-4cc3-ac0b-aa13caa224be" href="Mech x Elec_files\cd000020.jpg" status="reviewed" distance="-0.014">
+            <description>Hard</description>
+            <resultstatus>Reviewed</resultstatus>
+            <clashpoint>
+              <pos3f x="10.327" y="-28.455" z="6.447"/>
+            </clashpoint>
+            <gridlocation>B-7 : T.O. SLAB - MEZZ.</gridlocation>
+            <createddate>
+              <date year="2016" month="12" day="28" hour="13" minute="16" second="17"/>
+            </createddate>
+            <clashobjects>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>57502</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Mechanical.nwc</node>
+                  <node>Duct Fittings</node>
+                  <node>Round Elbow</node>
+                  <node>1 D</node>
+                  <node>Round Elbow</node>
+                  <node>1 D</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>1 D</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>4336733</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Electrical.nwc</node>
+                  <node>50111 - YH - Carlsbad CA - Rvt 2015 - Central.rvt : 1 : location &lt;Not Shared&gt;</node>
+                  <node>Lighting Fixtures</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Lt - FB -  Track</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+            </clashobjects>
+          </clashresult>
+          <clashresult name="Clash40" guid="488ec833-7403-4ffd-9f38-7c6ded26dc54" href="Mech x Elec_files\cd000021.jpg" status="reviewed" distance="-0.014">
+            <description>Hard</description>
+            <resultstatus>Reviewed</resultstatus>
+            <clashpoint>
+              <pos3f x="28.555" y="-28.366" z="5.080"/>
+            </clashpoint>
+            <gridlocation>B-5 : T.O. SLAB - MEZZ.</gridlocation>
+            <createddate>
+              <date year="2016" month="12" day="28" hour="13" minute="16" second="17"/>
+            </createddate>
+            <clashobjects>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>46532</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Mechanical.nwc</node>
+                  <node>Ducts</node>
+                  <node>Rectangular Duct</node>
+                  <node>Default</node>
+                  <node>Rectangular Duct</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Rectangular Duct</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>4337405</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Electrical.nwc</node>
+                  <node>50111 - YH - Carlsbad CA - Rvt 2015 - Central.rvt : 1 : location &lt;Not Shared&gt;</node>
+                  <node>Lighting Fixtures</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Lt - FB -  Track</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+            </clashobjects>
+          </clashresult>
+          <clashresult name="Clash41" guid="3138c360-fca8-41d2-81c1-58cad6ced210" href="Mech x Elec_files\cd000022.jpg" status="reviewed" distance="-0.014">
+            <description>Hard</description>
+            <resultstatus>Reviewed</resultstatus>
+            <clashpoint>
+              <pos3f x="11.257" y="-36.616" z="6.391"/>
+            </clashpoint>
+            <gridlocation>A-7 : T.O. SLAB - MEZZ.</gridlocation>
+            <createddate>
+              <date year="2016" month="12" day="28" hour="13" minute="16" second="17"/>
+            </createddate>
+            <clashobjects>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>56430</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Mechanical.nwc</node>
+                  <node>Ducts</node>
+                  <node>Round Duct</node>
+                  <node>Default</node>
+                  <node>Round Duct</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Round Duct</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>4316508</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Electrical.nwc</node>
+                  <node>50111 - YH - Carlsbad CA - Rvt 2015 - Central.rvt : 1 : location &lt;Not Shared&gt;</node>
+                  <node>Lighting Fixtures</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Lt - FB -  Track</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Lt - FB -  Track</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+            </clashobjects>
+          </clashresult>
+          <clashresult name="Clash49" guid="4441e39d-effa-4fb4-b438-a3f330202157" href="Mech x Elec_files\cd000023.jpg" status="reviewed" distance="-0.006">
+            <description>Hard</description>
+            <resultstatus>Reviewed</resultstatus>
+            <clashpoint>
+              <pos3f x="7.842" y="-32.788" z="3.030"/>
+            </clashpoint>
+            <gridlocation>B-7 : Level 1</gridlocation>
+            <createddate>
+              <date year="2016" month="12" day="28" hour="13" minute="16" second="17"/>
+            </createddate>
+            <clashobjects>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>60763</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Mechanical.nwc</node>
+                  <node>Air Terminals</node>
+                  <node>Titus-Round_Neck_Supply_Diffuser-OMNI_Surface_Mount</node>
+                  <node>OMNI-08_12x12</node>
+                  <node>Titus-Round_Neck_Supply_Diffuser-OMNI_Surface_Mount</node>
+                  <node>OMNI-08_12x12</node>
+                  <node>Steel - Titus - 26 White</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Steel - Titus - 26 White</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>4307997</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Electrical.nwc</node>
+                  <node>50111 - YH - Carlsbad CA - Rvt 2015 - Central.rvt : 1 : location &lt;Not Shared&gt;</node>
+                  <node>Lighting Fixtures</node>
+                  <node>Lt - B - Recessed Can</node>
+                  <node>3.5&quot; Recessed LED SPOT Optics</node>
+                  <node>Lt - B - Recessed Can</node>
+                  <node>3.5&quot; Recessed LED SPOT Optics</node>
+                  <node>Solid</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>3.5&quot; Recessed LED SPOT Optics</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+            </clashobjects>
+          </clashresult>
+          <clashresult name="Clash51" guid="b864ed50-449c-4627-9b4a-fa3d288b5e92" href="Mech x Elec_files\cd000024.jpg" status="reviewed" distance="-0.002">
+            <description>Hard</description>
+            <resultstatus>Reviewed</resultstatus>
+            <clashpoint>
+              <pos3f x="10.003" y="-42.874" z="3.021"/>
+            </clashpoint>
+            <gridlocation>A1-7 : Level 1</gridlocation>
+            <createddate>
+              <date year="2016" month="12" day="28" hour="13" minute="16" second="17"/>
+            </createddate>
+            <clashobjects>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>42690</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Mechanical.nwc</node>
+                  <node>Air Terminals</node>
+                  <node>Titus-Round_Neck_Supply_Diffuser-PCS_Surface_Mount</node>
+                  <node>PCS AA-08_12x12</node>
+                  <node>Titus-Round_Neck_Supply_Diffuser-PCS_Surface_Mount</node>
+                  <node>PCS AA-08_12x12</node>
+                  <node>Aluminum - Titus - 26 White</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>Aluminum - Titus - 26 White</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Solid</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+              <clashobject>
+                <objectattribute>
+                  <name>Element ID</name>
+                  <value>4313653</value>
+                </objectattribute>
+                <pathlink>
+                  <node>File</node>
+                  <node>File</node>
+                  <node>Navis - Electrical.nwc</node>
+                  <node>50111 - YH - Carlsbad CA - Rvt 2015 - Central.rvt : 1 : location &lt;Not Shared&gt;</node>
+                  <node>Electrical Fixtures</node>
+                  <node>AV - Speaker - Clng Mount</node>
+                  <node>CM500i</node>
+                  <node>AV - Speaker - Clng Mount</node>
+                  <node>CM500i</node>
+                  <node>Composite Part</node>
+                </pathlink>
+                <smarttags>
+                  <smarttag>
+                    <name>Item Name</name>
+                    <value>CM500i</value>
+                  </smarttag>
+                  <smarttag>
+                    <name>Item Type</name>
+                    <value>Composite Part</value>
+                  </smarttag>
+                </smarttags>
+              </clashobject>
+            </clashobjects>
+          </clashresult>
+        </clashresults>
+      </clashtest>
+    </clashtests>
+    <selectionsets/>
+  </batchtest>
+</exchange>
