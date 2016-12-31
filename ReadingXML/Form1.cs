@@ -23,10 +23,14 @@ namespace ReadingXML
         string fileNameWithPath;
         string fileDirectory;
         string fileName;
+        string rowDetails;
 
         public Form1()
         {
             InitializeComponent();
+
+            // Select whole row
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         // Browse for a file
@@ -46,15 +50,47 @@ namespace ReadingXML
                 // Displays the current fileNameWithPath in textbox
                 filePathTextBox.Text = fileNameWithPath;
 
-                // Create new DataSet object
+                // Create xml reader
+                XmlReader xmlFile = XmlReader.Create(fileNameWithPath, new XmlReaderSettings());
                 DataSet dataSet = new DataSet();
-                dataSet.ReadXml(fileNameWithPath);
 
-                // Print dataset to data grid
-                dataGridView1.DataSource = dataSet;
-                dataGridView1.DataMember = "clashresult";
+                // Read xml to dataset
+                dataSet.ReadXml(xmlFile);
+
+                // Pass empdetails table to datagridview datasource
+                dataGridView1.DataSource = dataSet.Tables["clashresult"];
+
+                // Close xml reader
+                xmlFile.Close();
 
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void viewDetailsButton_Click(object sender, EventArgs e)
+        {
+            // Get selected rows: https://msdn.microsoft.com/en-us/library/x8x9zk5a(v=vs.110).aspx
+            Int32 selectedRowCount =
+            dataGridView1.Rows.GetRowCount(DataGridViewElementStates.Selected);
+            if (selectedRowCount > 0)
+            {
+                System.Text.StringBuilder sb = new System.Text.StringBuilder();
+
+                for (int i = 0; i < selectedRowCount; i++)
+                {
+                    sb.Append("Row: ");
+                    sb.Append(dataGridView1.SelectedRows[i].Index.ToString());
+                    sb.Append(Environment.NewLine);
+                }
+
+                sb.Append("Total: " + selectedRowCount.ToString());
+                MessageBox.Show(sb.ToString(), "Selected Rows");
+            }
+
         }
     }
 }
