@@ -25,13 +25,31 @@ namespace ReadingXML
         string fileName;
         string rowDetails;
 
+        // UI support
+        Int32 selectedRowCount = 0;
+
         public Form1()
         {
             InitializeComponent();
 
             // Select whole row
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
         }
+
+        // Enable the view details button
+        //int curRow = -1;
+        //private void dgv1_SelectionChanged(object sender, EventArgs e)
+        //{
+        //    if (dataGridView1.CurrentRow.Index != curRow)
+        //    {
+        //        //curRow = dataGridView2.CurrentRow.Index;
+        //        viewDetailsButton.Enabled = true;
+
+        //        // TEMP: Displays the current fileNameWithPath in status bar
+        //        filePathTextBox.Text = "Selected: " + curRow;
+        //    }
+        //}
 
         // Browse for a file
         private void xmlFileBrowser_Click(object sender, EventArgs e)
@@ -47,8 +65,8 @@ namespace ReadingXML
                 fileDirectory = Path.GetDirectoryName(openFileDialog1.FileName);
                 fileName = Path.GetFileName(openFileDialog1.FileName);
 
-                // Displays the current fileNameWithPath in textbox
-                filePathTextBox.Text = fileNameWithPath;
+                // Displays the current fileNameWithPath in status bar
+                filePathTextBox.Text = "Loaded: " + fileNameWithPath;
 
                 // Create xml reader
                 XmlReader xmlFile = XmlReader.Create(fileNameWithPath, new XmlReaderSettings());
@@ -68,16 +86,20 @@ namespace ReadingXML
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void viewDetailsButton_Click(object sender, EventArgs e)
         {
             // Get selected rows: https://msdn.microsoft.com/en-us/library/x8x9zk5a(v=vs.110).aspx
-            Int32 selectedRowCount =
+            selectedRowCount =
             dataGridView1.Rows.GetRowCount(DataGridViewElementStates.Selected);
             if (selectedRowCount > 0)
             {
+                // Enable button
+                viewDetailsButton.Enabled = true;
+
+                // Print details of selected row number to MessageBox
                 System.Text.StringBuilder sb = new System.Text.StringBuilder();
 
                 for (int i = 0; i < selectedRowCount; i++)
@@ -89,6 +111,19 @@ namespace ReadingXML
 
                 sb.Append("Total: " + selectedRowCount.ToString());
                 MessageBox.Show(sb.ToString(), "Selected Rows");
+
+                //// Print selected row number to MessageBox
+                //System.Text.StringBuilder sb = new System.Text.StringBuilder();
+
+                //for (int i = 0; i < selectedRowCount; i++)
+                //{
+                //    sb.Append("Row: ");
+                //    sb.Append(dataGridView1.SelectedRows[i].Index.ToString());
+                //    sb.Append(Environment.NewLine);
+                //}
+
+                //sb.Append("Total: " + selectedRowCount.ToString());
+                //MessageBox.Show(sb.ToString(), "Selected Rows");
             }
 
         }
