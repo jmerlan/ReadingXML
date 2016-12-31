@@ -28,22 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.XMLDataSet = new System.Data.DataSet();
             this.statusBarPanel = new System.Windows.Forms.Panel();
             this.filePathTextBox = new System.Windows.Forms.TextBox();
             this.xmlFileBrowser = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.ribbonPanel = new System.Windows.Forms.Panel();
             this.viewDetailsButton = new System.Windows.Forms.Button();
             this.contentPanel = new System.Windows.Forms.Panel();
             this.containerPanel = new System.Windows.Forms.Panel();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.XMLDataSet)).BeginInit();
             this.statusBarPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.ribbonPanel.SuspendLayout();
             this.contentPanel.SuspendLayout();
             this.containerPanel.SuspendLayout();
@@ -55,15 +54,16 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Right;
             this.dataGridView1.Location = new System.Drawing.Point(155, 0);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -118,18 +118,6 @@
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Filter = "XML Files|*.xml";
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(155, 487);
-            this.dataGridView2.TabIndex = 5;
-            this.dataGridView2.TabStop = false;
-            // 
             // ribbonPanel
             // 
             this.ribbonPanel.Controls.Add(this.viewDetailsButton);
@@ -145,6 +133,7 @@
             this.viewDetailsButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.viewDetailsButton.AutoSize = true;
+            this.viewDetailsButton.Enabled = false;
             this.viewDetailsButton.Location = new System.Drawing.Point(968, 5);
             this.viewDetailsButton.Name = "viewDetailsButton";
             this.viewDetailsButton.Padding = new System.Windows.Forms.Padding(5);
@@ -157,8 +146,8 @@
             // 
             // contentPanel
             // 
+            this.contentPanel.Controls.Add(this.treeView1);
             this.contentPanel.Controls.Add(this.dataGridView1);
-            this.contentPanel.Controls.Add(this.dataGridView2);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(0, 44);
             this.contentPanel.Name = "contentPanel";
@@ -178,6 +167,14 @@
             this.containerPanel.Size = new System.Drawing.Size(1207, 554);
             this.containerPanel.TabIndex = 6;
             // 
+            // treeView1
+            // 
+            this.treeView1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.treeView1.Location = new System.Drawing.Point(0, 0);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(149, 487);
+            this.treeView1.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,7 +188,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.XMLDataSet)).EndInit();
             this.statusBarPanel.ResumeLayout(false);
             this.statusBarPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ribbonPanel.ResumeLayout(false);
             this.ribbonPanel.PerformLayout();
             this.contentPanel.ResumeLayout(false);
@@ -209,11 +205,11 @@
         private System.Windows.Forms.Button xmlFileBrowser;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.TextBox filePathTextBox;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Panel ribbonPanel;
         private System.Windows.Forms.Button viewDetailsButton;
         private System.Windows.Forms.Panel contentPanel;
         private System.Windows.Forms.Panel containerPanel;
+        private System.Windows.Forms.TreeView treeView1;
     }
 }
 

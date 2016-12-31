@@ -86,7 +86,12 @@ namespace ReadingXML
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            selectedRowCount = 1;
 
+            if (selectedRowCount > 0)
+            {
+                this.viewDetailsButton.Enabled = true;
+            }
         }
 
         private void viewDetailsButton_Click(object sender, EventArgs e)
@@ -125,7 +130,12 @@ namespace ReadingXML
                 //sb.Append("Total: " + selectedRowCount.ToString());
                 //MessageBox.Show(sb.ToString(), "Selected Rows");
             }
-
+        }
+            
+        static string GetAttributeText(XmlNode inXmlNode, string name)
+        {
+            XmlAttribute attr = (inXmlNode.Attributes == null ? null : inXmlNode.Attributes[name]);
+            return attr == null ? null : attr.Value;
         }
     }
 }
