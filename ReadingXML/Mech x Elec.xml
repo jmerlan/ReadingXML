@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<exchange xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" units="m" filename="" filepath="">
+<exchange xmlns:bk="urn:samples" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" units="m" filename="" filepath="">
   <batchtest name="Report" internal_name="Report" units="m">
     <clashtests>
       <clashtest name="Mech x Elec" test_type="hard" status="ok" tolerance="0.001" merge_composites="1">

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.XMLDataSet = new System.Data.DataSet();
             this.statusBarPanel = new System.Windows.Forms.Panel();
@@ -39,13 +39,14 @@
             this.viewDetailsButton = new System.Windows.Forms.Button();
             this.contentPanel = new System.Windows.Forms.Panel();
             this.containerPanel = new System.Windows.Forms.Panel();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.detailsGridView = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.XMLDataSet)).BeginInit();
             this.statusBarPanel.SuspendLayout();
             this.ribbonPanel.SuspendLayout();
             this.contentPanel.SuspendLayout();
             this.containerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.detailsGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -54,14 +55,13 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Right;
             this.dataGridView1.Location = new System.Drawing.Point(155, 0);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -70,7 +70,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1052, 487);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.TabStop = false;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // XMLDataSet
             // 
@@ -133,7 +132,6 @@
             this.viewDetailsButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.viewDetailsButton.AutoSize = true;
-            this.viewDetailsButton.Enabled = false;
             this.viewDetailsButton.Location = new System.Drawing.Point(968, 5);
             this.viewDetailsButton.Name = "viewDetailsButton";
             this.viewDetailsButton.Padding = new System.Windows.Forms.Padding(5);
@@ -146,7 +144,7 @@
             // 
             // contentPanel
             // 
-            this.contentPanel.Controls.Add(this.treeView1);
+            this.contentPanel.Controls.Add(this.detailsGridView);
             this.contentPanel.Controls.Add(this.dataGridView1);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(0, 44);
@@ -167,13 +165,15 @@
             this.containerPanel.Size = new System.Drawing.Size(1207, 554);
             this.containerPanel.TabIndex = 6;
             // 
-            // treeView1
+            // detailsGridView
             // 
-            this.treeView1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.treeView1.Location = new System.Drawing.Point(0, 0);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(149, 487);
-            this.treeView1.TabIndex = 1;
+            this.detailsGridView.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.detailsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.detailsGridView.Dock = System.Windows.Forms.DockStyle.Left;
+            this.detailsGridView.Location = new System.Drawing.Point(0, 0);
+            this.detailsGridView.Name = "detailsGridView";
+            this.detailsGridView.Size = new System.Drawing.Size(149, 487);
+            this.detailsGridView.TabIndex = 1;
             // 
             // Form1
             // 
@@ -192,6 +192,7 @@
             this.ribbonPanel.PerformLayout();
             this.contentPanel.ResumeLayout(false);
             this.containerPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.detailsGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,7 +210,7 @@
         private System.Windows.Forms.Button viewDetailsButton;
         private System.Windows.Forms.Panel contentPanel;
         private System.Windows.Forms.Panel containerPanel;
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.DataGridView detailsGridView;
     }
 }
 

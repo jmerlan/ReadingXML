@@ -23,7 +23,10 @@ namespace ReadingXML
         string fileNameWithPath;
         string fileDirectory;
         string fileName;
-        string rowDetails;
+        DataSet dataSet = new DataSet();
+        DataTable xdocDataTable = new DataTable();
+        XDocument doc = new XDocument();
+        XmlDocument xDoc = new XmlDocument();
 
         // UI support
         Int32 selectedRowCount = 0;
@@ -36,20 +39,6 @@ namespace ReadingXML
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
         }
-
-        // Enable the view details button
-        //int curRow = -1;
-        //private void dgv1_SelectionChanged(object sender, EventArgs e)
-        //{
-        //    if (dataGridView1.CurrentRow.Index != curRow)
-        //    {
-        //        //curRow = dataGridView2.CurrentRow.Index;
-        //        viewDetailsButton.Enabled = true;
-
-        //        // TEMP: Displays the current fileNameWithPath in status bar
-        //        filePathTextBox.Text = "Selected: " + curRow;
-        //    }
-        //}
 
         // Browse for a file
         private void xmlFileBrowser_Click(object sender, EventArgs e)
@@ -65,32 +54,24 @@ namespace ReadingXML
                 fileDirectory = Path.GetDirectoryName(openFileDialog1.FileName);
                 fileName = Path.GetFileName(openFileDialog1.FileName);
 
+                // Load xmlFile into xDoc
+                xDoc.Load(fileNameWithPath);
+
                 // Displays the current fileNameWithPath in status bar
                 filePathTextBox.Text = "Loaded: " + fileNameWithPath;
-
+              
                 // Create xml reader
                 XmlReader xmlFile = XmlReader.Create(fileNameWithPath, new XmlReaderSettings());
-                DataSet dataSet = new DataSet();
 
                 // Read xml to dataset
                 dataSet.ReadXml(xmlFile);
 
-                // Pass empdetails table to datagridview datasource
+                // Pass table to datagridview datasource
                 dataGridView1.DataSource = dataSet.Tables["clashresult"];
 
                 // Close xml reader
                 xmlFile.Close();
 
-            }
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            selectedRowCount = 1;
-
-            if (selectedRowCount > 0)
-            {
-                this.viewDetailsButton.Enabled = true;
             }
         }
 
@@ -101,42 +82,20 @@ namespace ReadingXML
             dataGridView1.Rows.GetRowCount(DataGridViewElementStates.Selected);
             if (selectedRowCount > 0)
             {
-                // Enable button
-                viewDetailsButton.Enabled = true;
+                //Create an XmlNamespaceManager for resolving namespaces.
+                XmlNamespaceManager nsmgr = new XmlNamespaceManager(xDoc.NameTable);
+                nsmgr.AddNamespace("bk", "urn:samples");
 
-                // Print details of selected row number to MessageBox
-                System.Text.StringBuilder sb = new System.Text.StringBuilder();
+                //Select the book node with the matching attribute value.
+                XmlNode clashResult;
+                XmlElement root = xDoc.DocumentElement;
+                clashResult = root.SelectSingleNode("descendant::clashresult[@guid='73bb82ea-c041-4408-a006-8f2bce9ab9a2']", nsmgr);
 
-                for (int i = 0; i < selectedRowCount; i++)
-                {
-                    sb.Append("Row: ");
-                    sb.Append(dataGridView1.SelectedRows[i].Index.ToString());
-                    sb.Append(Environment.NewLine);
-                }
-
-                sb.Append("Total: " + selectedRowCount.ToString());
-                MessageBox.Show(sb.ToString(), "Selected Rows");
-
-                //// Print selected row number to MessageBox
-                //System.Text.StringBuilder sb = new System.Text.StringBuilder();
-
-                //for (int i = 0; i < selectedRowCount; i++)
-                //{
-                //    sb.Append("Row: ");
-                //    sb.Append(dataGridView1.SelectedRows[i].Index.ToString());
-                //    sb.Append(Environment.NewLine);
-                //}
-
-                //sb.Append("Total: " + selectedRowCount.ToString());
-                //MessageBox.Show(sb.ToString(), "Selected Rows");
+                // Temp: Show InnerXml in messagebox for testing
+                MessageBox.Show(clashResult.InnerXml);
             }
         }
-            
-        static string GetAttributeText(XmlNode inXmlNode, string name)
-        {
-            XmlAttribute attr = (inXmlNode.Attributes == null ? null : inXmlNode.Attributes[name]);
-            return attr == null ? null : attr.Value;
-        }
     }
+
 }
 
