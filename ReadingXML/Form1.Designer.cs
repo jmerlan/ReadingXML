@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.XMLDataSet = new System.Data.DataSet();
             this.statusBarPanel = new System.Windows.Forms.Panel();
-            this.filePathTextBox = new System.Windows.Forms.TextBox();
+            this.statusTextBox = new System.Windows.Forms.TextBox();
             this.xmlFileBrowser = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.ribbonPanel = new System.Windows.Forms.Panel();
             this.viewDetailsButton = new System.Windows.Forms.Button();
             this.contentPanel = new System.Windows.Forms.Panel();
+            this.detailsTextBox = new System.Windows.Forms.TextBox();
             this.containerPanel = new System.Windows.Forms.Panel();
-            this.detailsGridView = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.XMLDataSet)).BeginInit();
             this.statusBarPanel.SuspendLayout();
             this.ribbonPanel.SuspendLayout();
             this.contentPanel.SuspendLayout();
             this.containerPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.detailsGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -67,9 +67,14 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(3);
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.RowTemplate.Height = 35;
+            this.dataGridView1.RowTemplate.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1052, 487);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.TabStop = false;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // XMLDataSet
             // 
@@ -77,24 +82,24 @@
             // 
             // statusBarPanel
             // 
-            this.statusBarPanel.Controls.Add(this.filePathTextBox);
+            this.statusBarPanel.Controls.Add(this.statusTextBox);
             this.statusBarPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.statusBarPanel.Location = new System.Drawing.Point(0, 531);
             this.statusBarPanel.Name = "statusBarPanel";
             this.statusBarPanel.Size = new System.Drawing.Size(1207, 23);
             this.statusBarPanel.TabIndex = 4;
             // 
-            // filePathTextBox
+            // statusTextBox
             // 
-            this.filePathTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.filePathTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.filePathTextBox.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.filePathTextBox.Location = new System.Drawing.Point(0, 0);
-            this.filePathTextBox.Name = "filePathTextBox";
-            this.filePathTextBox.Size = new System.Drawing.Size(1207, 20);
-            this.filePathTextBox.TabIndex = 3;
-            this.filePathTextBox.TabStop = false;
-            this.filePathTextBox.Text = "No clash report loaded.";
+            this.statusTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.statusTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.statusTextBox.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.statusTextBox.Location = new System.Drawing.Point(0, 0);
+            this.statusTextBox.Name = "statusTextBox";
+            this.statusTextBox.Size = new System.Drawing.Size(1207, 20);
+            this.statusTextBox.TabIndex = 3;
+            this.statusTextBox.TabStop = false;
+            this.statusTextBox.Text = "No clash report loaded.";
             // 
             // xmlFileBrowser
             // 
@@ -144,13 +149,22 @@
             // 
             // contentPanel
             // 
-            this.contentPanel.Controls.Add(this.detailsGridView);
+            this.contentPanel.Controls.Add(this.detailsTextBox);
             this.contentPanel.Controls.Add(this.dataGridView1);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(0, 44);
             this.contentPanel.Name = "contentPanel";
             this.contentPanel.Size = new System.Drawing.Size(1207, 487);
             this.contentPanel.TabIndex = 7;
+            // 
+            // detailsTextBox
+            // 
+            this.detailsTextBox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.detailsTextBox.Location = new System.Drawing.Point(0, 0);
+            this.detailsTextBox.Multiline = true;
+            this.detailsTextBox.Name = "detailsTextBox";
+            this.detailsTextBox.Size = new System.Drawing.Size(149, 487);
+            this.detailsTextBox.TabIndex = 2;
             // 
             // containerPanel
             // 
@@ -164,16 +178,6 @@
             this.containerPanel.Name = "containerPanel";
             this.containerPanel.Size = new System.Drawing.Size(1207, 554);
             this.containerPanel.TabIndex = 6;
-            // 
-            // detailsGridView
-            // 
-            this.detailsGridView.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.detailsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.detailsGridView.Dock = System.Windows.Forms.DockStyle.Left;
-            this.detailsGridView.Location = new System.Drawing.Point(0, 0);
-            this.detailsGridView.Name = "detailsGridView";
-            this.detailsGridView.Size = new System.Drawing.Size(149, 487);
-            this.detailsGridView.TabIndex = 1;
             // 
             // Form1
             // 
@@ -191,8 +195,8 @@
             this.ribbonPanel.ResumeLayout(false);
             this.ribbonPanel.PerformLayout();
             this.contentPanel.ResumeLayout(false);
+            this.contentPanel.PerformLayout();
             this.containerPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.detailsGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,12 +209,12 @@
         private System.Windows.Forms.Panel statusBarPanel;
         private System.Windows.Forms.Button xmlFileBrowser;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.TextBox filePathTextBox;
+        private System.Windows.Forms.TextBox statusTextBox;
         private System.Windows.Forms.Panel ribbonPanel;
         private System.Windows.Forms.Button viewDetailsButton;
         private System.Windows.Forms.Panel contentPanel;
         private System.Windows.Forms.Panel containerPanel;
-        private System.Windows.Forms.DataGridView detailsGridView;
+        private System.Windows.Forms.TextBox detailsTextBox;
     }
 }
 

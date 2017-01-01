@@ -24,12 +24,15 @@ namespace ReadingXML
         string fileDirectory;
         string fileName;
         DataSet dataSet = new DataSet();
+        DataSet detailsDataSet = new DataSet();
         DataTable xdocDataTable = new DataTable();
         XDocument doc = new XDocument();
         XmlDocument xDoc = new XmlDocument();
 
         // UI support
         Int32 selectedRowCount = 0;
+        XmlNode selectedNode;
+        string selectedGuid;
 
         public Form1()
         {
@@ -58,7 +61,7 @@ namespace ReadingXML
                 xDoc.Load(fileNameWithPath);
 
                 // Displays the current fileNameWithPath in status bar
-                filePathTextBox.Text = "Loaded: " + fileNameWithPath;
+                statusTextBox.Text = "Loaded: " + fileNameWithPath;
               
                 // Create xml reader
                 XmlReader xmlFile = XmlReader.Create(fileNameWithPath, new XmlReaderSettings());
@@ -86,16 +89,31 @@ namespace ReadingXML
                 XmlNamespaceManager nsmgr = new XmlNamespaceManager(xDoc.NameTable);
                 nsmgr.AddNamespace("bk", "urn:samples");
 
-                //Select the book node with the matching attribute value.
+                //Select the clash node with the matching GUID.
                 XmlNode clashResult;
                 XmlElement root = xDoc.DocumentElement;
-                clashResult = root.SelectSingleNode("descendant::clashresult[@guid='73bb82ea-c041-4408-a006-8f2bce9ab9a2']", nsmgr);
+                clashResult = root.SelectSingleNode("descendant::clashresult[@guid='" + "73bb82ea-c041-4408-a006-8f2bce9ab9a2" + "']", nsmgr);
 
                 // Temp: Show InnerXml in messagebox for testing
-                MessageBox.Show(clashResult.InnerXml);
+                detailsTextBox.Text = clashResult.InnerXml;
+
             }
         }
-    }
 
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Get row index on CellClick
+            int currentRow = dataGridView1.SelectedCells[0].RowIndex;
+
+            // Get currentRow value
+            selectedGuid = dataGridView1.Rows[currentRow].Cells["guid"].Value.ToString();
+
+            // Print stuff
+            statusTextBox.Text = "Current row selected: " + currentRow.ToString() + 
+                "   |   " + 
+                "GUID: " + selectedGuid;
+        }
+
+    }
 }
 
