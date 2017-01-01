@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.XMLDataSet = new System.Data.DataSet();
             this.statusBarPanel = new System.Windows.Forms.Panel();
@@ -37,7 +37,6 @@
             this.xmlFileBrowser = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.ribbonPanel = new System.Windows.Forms.Panel();
-            this.viewDetailsButton = new System.Windows.Forms.Button();
             this.contentPanel = new System.Windows.Forms.Panel();
             this.detailsTextBox = new System.Windows.Forms.TextBox();
             this.containerPanel = new System.Windows.Forms.Panel();
@@ -55,9 +54,9 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
@@ -67,8 +66,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(3);
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(3);
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.RowTemplate.Height = 35;
             this.dataGridView1.RowTemplate.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1052, 487);
@@ -92,6 +91,7 @@
             // statusTextBox
             // 
             this.statusTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.statusTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.statusTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.statusTextBox.ForeColor = System.Drawing.SystemColors.GrayText;
             this.statusTextBox.Location = new System.Drawing.Point(0, 0);
@@ -124,28 +124,12 @@
             // 
             // ribbonPanel
             // 
-            this.ribbonPanel.Controls.Add(this.viewDetailsButton);
             this.ribbonPanel.Controls.Add(this.xmlFileBrowser);
             this.ribbonPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonPanel.Location = new System.Drawing.Point(0, 0);
             this.ribbonPanel.Name = "ribbonPanel";
             this.ribbonPanel.Size = new System.Drawing.Size(1207, 44);
             this.ribbonPanel.TabIndex = 6;
-            // 
-            // viewDetailsButton
-            // 
-            this.viewDetailsButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.viewDetailsButton.AutoSize = true;
-            this.viewDetailsButton.Location = new System.Drawing.Point(968, 5);
-            this.viewDetailsButton.Name = "viewDetailsButton";
-            this.viewDetailsButton.Padding = new System.Windows.Forms.Padding(5);
-            this.viewDetailsButton.Size = new System.Drawing.Size(100, 33);
-            this.viewDetailsButton.TabIndex = 0;
-            this.viewDetailsButton.TabStop = false;
-            this.viewDetailsButton.Text = "View Details";
-            this.viewDetailsButton.UseVisualStyleBackColor = true;
-            this.viewDetailsButton.Click += new System.EventHandler(this.viewDetailsButton_Click);
             // 
             // contentPanel
             // 
@@ -163,6 +147,7 @@
             this.detailsTextBox.Location = new System.Drawing.Point(0, 0);
             this.detailsTextBox.Multiline = true;
             this.detailsTextBox.Name = "detailsTextBox";
+            this.detailsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.detailsTextBox.Size = new System.Drawing.Size(149, 487);
             this.detailsTextBox.TabIndex = 2;
             // 
@@ -211,7 +196,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.TextBox statusTextBox;
         private System.Windows.Forms.Panel ribbonPanel;
-        private System.Windows.Forms.Button viewDetailsButton;
         private System.Windows.Forms.Panel contentPanel;
         private System.Windows.Forms.Panel containerPanel;
         private System.Windows.Forms.TextBox detailsTextBox;

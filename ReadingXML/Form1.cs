@@ -78,27 +78,28 @@ namespace ReadingXML
             }
         }
 
-        private void viewDetailsButton_Click(object sender, EventArgs e)
-        {
-            // Get selected rows: https://msdn.microsoft.com/en-us/library/x8x9zk5a(v=vs.110).aspx
-            selectedRowCount =
-            dataGridView1.Rows.GetRowCount(DataGridViewElementStates.Selected);
-            if (selectedRowCount > 0)
-            {
-                //Create an XmlNamespaceManager for resolving namespaces.
-                XmlNamespaceManager nsmgr = new XmlNamespaceManager(xDoc.NameTable);
-                nsmgr.AddNamespace("bk", "urn:samples");
+        // Deleted View Details button 
+        //private void viewDetailsButton_Click(object sender, EventArgs e)
+        //{
+        //    // Get selected rows: https://msdn.microsoft.com/en-us/library/x8x9zk5a(v=vs.110).aspx
+        //    selectedRowCount =
+        //    dataGridView1.Rows.GetRowCount(DataGridViewElementStates.Selected);
+        //    if (selectedRowCount > 0)
+        //    {
+        //        ////Create an XmlNamespaceManager for resolving namespaces.
+        //        //XmlNamespaceManager nsmgr = new XmlNamespaceManager(xDoc.NameTable);
+        //        //nsmgr.AddNamespace("bk", "urn:samples");
 
-                //Select the clash node with the matching GUID.
-                XmlNode clashResult;
-                XmlElement root = xDoc.DocumentElement;
-                clashResult = root.SelectSingleNode("descendant::clashresult[@guid='" + "73bb82ea-c041-4408-a006-8f2bce9ab9a2" + "']", nsmgr);
+        //        ////Select the clash node with the matching GUID.
+        //        //XmlNode clashResult;
+        //        //XmlElement root = xDoc.DocumentElement;
+        //        //clashResult = root.SelectSingleNode("descendant::clashresult[@guid='" + selectedGuid + "']", nsmgr);
 
-                // Temp: Show InnerXml in messagebox for testing
-                detailsTextBox.Text = clashResult.InnerXml;
+        //        //// Temp: Show InnerXml in messagebox for testing
+        //        //detailsTextBox.Text = clashResult.InnerXml;
 
-            }
-        }
+        //    }
+        //}
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -108,7 +109,19 @@ namespace ReadingXML
             // Get currentRow value
             selectedGuid = dataGridView1.Rows[currentRow].Cells["guid"].Value.ToString();
 
-            // Print stuff
+            //Create an XmlNamespaceManager for resolving namespaces.
+            XmlNamespaceManager nsmgr = new XmlNamespaceManager(xDoc.NameTable);
+            nsmgr.AddNamespace("bk", "urn:samples");
+
+            //Select the clash node with the matching GUID.
+            XmlNode clashResult;
+            XmlElement root = xDoc.DocumentElement;
+            clashResult = root.SelectSingleNode("descendant::clashresult[@guid='" + selectedGuid + "']", nsmgr);
+
+            // Temp: Show InnerXml in messagebox for testing
+            detailsTextBox.Text = clashResult.InnerXml;
+
+            // Print stuff to status bar
             statusTextBox.Text = "Current row selected: " + currentRow.ToString() + 
                 "   |   " + 
                 "GUID: " + selectedGuid;
