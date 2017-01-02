@@ -33,6 +33,7 @@ namespace ReadingXML
         Int32 selectedRowCount = 0;
         XmlNode selectedNode;
         string selectedGuid;
+        string selectedClashName;
 
         public Form1()
         {
@@ -106,27 +107,39 @@ namespace ReadingXML
             // Get row index on CellClick
             int currentRow = dataGridView1.SelectedCells[0].RowIndex;
 
-            // Get currentRow value
+            // Get currentRow values
             selectedGuid = dataGridView1.Rows[currentRow].Cells["guid"].Value.ToString();
+            selectedClashName = dataGridView1.Rows[currentRow].Cells["name"].Value.ToString();
 
-            //Create an XmlNamespaceManager for resolving namespaces.
+            // Create an XmlNamespaceManager for resolving namespaces.
             XmlNamespaceManager nsmgr = new XmlNamespaceManager(xDoc.NameTable);
-            nsmgr.AddNamespace("bk", "urn:samples");
+            nsmgr.AddNamespace("xsi", "http://www.w3.org/2001/XMLSchema-instance");
 
-            //Select the clash node with the matching GUID.
-            XmlNode clashResult;
+            // Select the clash node with the matching GUID.
             XmlElement root = xDoc.DocumentElement;
-            clashResult = root.SelectSingleNode("descendant::clashresult[@guid='" + selectedGuid + "']", nsmgr);
+            XmlNode clashResult = root.SelectSingleNode("descendant::clashresult[@guid='" + selectedGuid + "']", nsmgr);
+            string clashResultString = clashResult.InnerXml;
+
+            // Get x,y,z coordinates from pos3f
+            int clashResultXPosition = clashResultString.IndexOf("x=");
+            int clashResultYPosition = clashResultString.IndexOf("y=");
+            int clashResultZPosition = clashResultString.IndexOf("z=");
+            int clashResultEndPosition = clashResultString.IndexOf("/clashpoint");
+
+            string clashResultX = clashResultString.Substring(clashResultXPosition + 3, clashResultYPosition - clashResultXPosition - 5);
+            String clashResultY = clashResultString.Substring(clashResultYPosition + 3, clashResultZPosition - clashResultYPosition - 5);
+            String clashResultZ = clashResultString.Substring(clashResultZPosition + 3, clashResultEndPosition - clashResultYPosition - 20);
 
             // Temp: Show InnerXml in messagebox for testing
-            detailsTextBox.Text = clashResult.InnerXml;
+            detailsTextBox.Text = "XML: " + "\n" + clashResultString;
 
             // Print stuff to status bar
-            statusTextBox.Text = "Current row selected: " + currentRow.ToString() + 
-                "   |   " + 
-                "GUID: " + selectedGuid;
-        }
+            statusTextBox.Text = "Clash Name: " + selectedClashName +
+                "   |   " + "X: " + clashResultX +
+                "   |   " + "Y: " + clashResultY +
+                "   |   " + "Z: " + clashResultZ;
 
+        }
     }
 }
 
