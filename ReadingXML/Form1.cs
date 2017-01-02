@@ -125,11 +125,15 @@ namespace ReadingXML
             int clashResultYPosition = clashResultString.IndexOf("y=");
             int clashResultZPosition = clashResultString.IndexOf("z=");
             int clashResultEndPosition = clashResultString.IndexOf("/clashpoint");
+            int clashResultEndClosePosition = clashResultString.IndexOf("</value>");
 
             string clashResultX = clashResultString.Substring(clashResultXPosition + 3, clashResultYPosition - clashResultXPosition - 5);
             String clashResultY = clashResultString.Substring(clashResultYPosition + 3, clashResultZPosition - clashResultYPosition - 5);
             String clashResultZ = clashResultString.Substring(clashResultZPosition + 3, clashResultEndPosition - clashResultYPosition - 20);
 
+            // Get element ID
+            int clashResultIdPosition = clashResultString.IndexOf("Element ID");
+            string clashResultId = clashResultString.Substring(clashResultIdPosition + 24, clashResultEndClosePosition - clashResultIdPosition - 24);
             // Temp: Show InnerXml in messagebox for testing
             detailsTextBox.Text = "XML: " + "\n" + clashResultString;
 
@@ -137,7 +141,8 @@ namespace ReadingXML
             statusTextBox.Text = "Clash Name: " + selectedClashName +
                 "   |   " + "X: " + clashResultX +
                 "   |   " + "Y: " + clashResultY +
-                "   |   " + "Z: " + clashResultZ;
+                "   |   " + "Z: " + clashResultZ +
+            "   |   " + "Element ID: " + clashResultId;
 
         }
     }
